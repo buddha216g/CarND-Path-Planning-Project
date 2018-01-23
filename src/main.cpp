@@ -320,7 +320,7 @@ int main() {
                 }
             }
             
-            
+            // Behavior Planning
             if (car_ahead)
             {
                 int best_lane=lane;
@@ -363,8 +363,8 @@ int main() {
                 std::cout << "Best Lane is  " << best_lane << std::endl;
                 std::cout << "Best cost is  " << best_cost << std::endl;
                 
-                //if (best_lane == lane && (ref_vel > lane_speeds[lane] || ref_vel > closest_speed))
-                //    speed_diff -= max_acc;
+                //
+                //
                 if (best_lane == lane && (ref_vel > closest_speed))
                     speed_diff -= max_acc;
                 
