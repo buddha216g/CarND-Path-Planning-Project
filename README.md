@@ -4,6 +4,9 @@ Self-Driving Car Engineer Nanodegree Program
 ### Introduction
 Goal was to safely navigate around a virtual highway (atleast 4.32 miles) with other traffic that is driving without any incidents. Incidents include, exceeding acceleration/jerk/speed, collision, and driving outside of the lanes.
 
+### Approach
+After reading the class material the project was still not clear. The project walkthrough and Q&A session was very helpful in getting started. Based on what was explained i used the spline approach for path generation. I then used sensor fusion and cost functions to implement the remaing part of the project.
+
 ### Model Description
 My model consisted of the following topics
 
