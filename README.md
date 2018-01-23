@@ -1,5 +1,52 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
+
+### Introduction
+Goal was to safely navigate around a virtual highway (atleast 4.32 miles) with other traffic that is driving without any incidents. Incidents include, exceeding acceleration/jerk/speed, collision, and driving outside of the lanes.
+
+### Model Description
+My model consisted of the following topics
+
+1. Prediction
+2. Behavior Planning
+3. Trajectory Generation
+
+
+
+#### Prediction
+Used sensor fusion data to predict where other vehiles are in the environment (code lines 265-321)
+Got average speeds of the lanes, predicted the s distance (Frenet co-ordinates) of others cars in the lane of the ego car to figure out if the there is a car ahead or to the right or left of ego car
+
+#### Behavior Planning
+Used information from prediction step and cost function to determing the best lane, speed and accelration(code lines 324-377)
+Enhanced behaviors that avoid collision with other cars, avoiding jerk and sudden decelration, efficiency (maintain target speed where ever possible)
+
+
+#### Trajectory Generation
+Used previous path and spline to generate trajectory (code lines 381-494)
+Started with a couple of points from the previous trajectory. Took 3 more points in the intervals of 30, 60 and 90.
+Used spline to generate 50 points (previous trajectory + new trajectory). The points are equidistantly spaced so as to produce a smooth trajectory. Accelration and decelration limits were maintained to avoid sudden jerks. Max velocity limit was set so as not to exceed the speed limit.
+
+
+
+
+
+
+*******************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+### Goals
+In this project your goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. You will be provided the car's localization and sensor fusion data, there is also a sparse map list of waypoints around the highway. The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. The car should be able to make one complete loop around the 6946m highway. Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
+
    
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
