@@ -28,6 +28,11 @@ Started with a couple of points from the previous trajectory. Took 3 more points
 Used spline to generate 50 points (previous trajectory + new trajectory). The points are equidistantly spaced so as to produce a smooth trajectory. Accelration and decelration limits were maintained to avoid sudden jerks. Max velocity limit was set so as not to exceed the speed limit.
 
 
+#### Output
+Code compiled and ran without errors. Car was able to navigate the entire loop without any incidents. See the snapshot below.
+
+
+![path planning project output](https://user-images.githubusercontent.com/15799394/35251266-70229494-0000-11e8-9546-5956bb725ea1.jpeg)
 
 
 
